@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -7,45 +6,45 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="css/estilos.css" rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<title>Prueba SPRING MVC - Agregar usuario</title>
+<link href="../css/estilos.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<title>Aumentar stock</title>
 </head>
 <body>
-	<form:form class="form-horizontal" method="POST" action="agregar_stock">
+	<div class="container">
+		<form:form method="GET" action="../sumando_stock">
 
-		<div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-			<div class="col-sm-10">
-				<input type="email" class="form-control" id="inputEmail3"
-					placeholder="Email">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-3 control-label">Nombre
+					del ingrediente:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" name="nombre" 
+						value='${miIngrediente.nombre}' readonly></input>
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-			<div class="col-sm-10">
-				<input type="password" class="form-control" id="inputPassword3"
-					placeholder="Password">
+		<br></br>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-3 control-label">Stock actual</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control"
+						placeholder='${miStock.obtenerStockDisponible(miIngrediente)}' readonly></input>
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				<button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
+		<br></br>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-3 control-label">Cuánto
+					stock desea agregar?</label>
+				<div class="col-sm-9">
+					<input type="number" name="stock_a_sumar" />
+				</div>
 			</div>
-		</div>
-		</form>
-		<tr>
-			<td><label>Nombre del ingrediente</label></td>
-			<td><c:out value="${ingredienteAModificar.getNombre()}" /></td>
-		</tr>
-		<tr>
-			<td><label>Cuánto stock desea agregar?</label></td>
-			<td><input type="number" name="cantidad" /></td>
-		</tr>
-		<tr>
-			<td><input type="submit" name="Enviar" /></td>
-		</tr>
-		</table>
-	</form:form>
+		<br></br>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-10">
+					<button type="submit" class="btn btn-primary" name="Enviar">Enviar</button>
+				</div>
+			</div>
+		</form:form>
+	</div>
 </body>
 </html>

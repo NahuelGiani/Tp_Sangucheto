@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -8,9 +7,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="css/estilos.css" rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<title>Prueba SPRING MVC - Agregar usuario</title>
+<link href="css/estilos.css" rel="stylesheet" />
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<title>Creando nuevo ingrediente</title>
 </head>
 <body>
 	<div class="container">
@@ -50,8 +49,8 @@
 					<button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
 				</div>
 			</div>
-	</div>
-	</form:form>
+		</div>
+		</form:form>
 	</div>
 </body>
 </html>

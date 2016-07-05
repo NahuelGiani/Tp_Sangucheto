@@ -9,37 +9,51 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="css/estilos.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/estilos.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <title>Stock actual</title>
 </head>
 <body>
-
 	<div class="container">
-		<div class="table-responsive">
-			<table class="table table-striped">
-				<tr>
-					<td><strong>Productos actuales en stock</strong></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Ingrediente</td>
-					<td>Cantidad</td>
-					<td>Aumentar stock</td>
-					<td>Eliminar stock</td>
-				</tr>
-				<c:forEach items="${miStock}" var="ingredienteActual">
-					<tr>
-						<td>${ingredienteActual.key.getNombre()}</td>
-						<td>${ingredienteActual.value}</td>
-						<td><a class="btn btn-default" href="agregar_stock/${ingredienteActual}" role="button">+</a></td>
-						<td><a class="btn btn-default" href="eliminar_stock/${ingredienteActual}" role="button">-</a></td>
-					</tr>
-				</c:forEach>
-			</table>
+		<div class="row">
+			<c:if test="${mensajeError != null}">	  	
+				<div class="col-md-4"></div>
+ 				<div class="col-md-4"><p><h4><c:out value="${mensajeError}"/></h4><p>	</div>
+ 				<div class="col-md-4"></div>
+			</c:if>
 		</div>
-		<a type="button" class="btn btn-primary" href="nuevo_ingrediente">Agregar ingrediente</a>
+		<div class="row">
+			<br></br>
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<tr>
+						<td><strong>Nuestro stock actual</strong></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Ingrediente</td>
+						<td>Cantidad en stock</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<c:forEach items="${miStock}" var="ingredienteActual">
+						<tr>
+							<td>${ingredienteActual.key.getNombre()}</td>
+							<td>${ingredienteActual.value}</td>
+							<td><a class="btn btn-primary" href="agregar_stock/${ingredienteActual.key.getNombre()}" 	role="button">Agregar cantidad</a></td>
+							<td><a class="btn btn-primary" href="restar_stock/${ingredienteActual.key.getNombre()}" 	role="button">Reducir cantidad</a></td>
+							<td><a class="btn btn-danger" href="confirmar_eliminar_ingrediente/${ingredienteActual.key.getNombre()}" 	role="button">Eliminar ingrediente</a></td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+			<a type="button" class="btn btn-info" href="nuevo_ingrediente">Agregar ingrediente</a>
+		</div>
+		<div class="row"></div>
 	</div>
-
 </body>
 </html>
