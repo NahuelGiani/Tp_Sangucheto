@@ -19,7 +19,7 @@
 			<div class="col-md-3"></div>
 	  		<div class="col-md-6">
 	  			<br></br>
-	  			<h2>Bienvenido a SuSangucheto.com!</h2>
+	  			<h2>Bienvenido a SuSanguchetto.com!</h2>
 			</div>
 	 		<div class="col-md-3"></div>
 		</div>
@@ -28,15 +28,15 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div id="link_sangucheto" class="col-md-5">
-				<a href="armarloxl">
-					<h3>Cree si sangucheto ahora mismo!</h3>
+				<a href="sanguchetto/mi_sanguchetto">
+					<h3>Cree su sanguchetto ahora mismo!</h3>
 					<br></br>
-					<div id="imagen1"><img src="<c:url value="/resources/img/sangucheto.jpg"/>"/></img></div>
+					<div id="imagen1"><img src="<c:url value="/resources/img/sanguchetto.jpg"/>"/></img></div>
 				</a>
 			</div>
 			<div class="col-md-5">
 				<a href="stock/stock_actual">
-					<h3>Modifique a su gusto el stock</h3>
+					<h3>Modifique el catalogo y stock (Admin)</h3>
 					<br></br>
 					<div id="imagen2"><img src="<c:url value="/resources/img/stock.jpg"/>"/></img></div>
 				</a>

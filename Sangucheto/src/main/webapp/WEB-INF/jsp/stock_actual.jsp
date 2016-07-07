@@ -15,21 +15,14 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<c:if test="${mensajeError != null}">	  	
-				<div class="col-md-2"></div>
- 				<div class="col-md-4"><p><h4><c:out value="${mensajeError}"/></h4><p>	</div>
- 				<div class="col-md-2"></div>
-			</c:if>
-		</div>
-		<div class="row">
 			<br></br>
 			<div class="table-responsive">
 				<div class="table-responsive">
   					<table id="tabla_stock" class="table table-hover">
 						<tr>
+							<td><strong><h2>Nuestro stock actual</h2></strong></td>
 							<td></td>
 							<td></td>
-							<td><strong><h3>Nuestro stock actual</h3></strong></td>
 							<td></td>
 							<td></td>
 						</tr>
@@ -53,8 +46,18 @@
 				</div>
 			</div>
 			<a type="button" class="btn btn-info" href="nuevo_ingrediente">Agregar ingrediente</a>
+			<a type="button" class="btn btn-primary" href="../index.jsp">Volver al index</a>
 		</div>
 		<div class="row"></div>
+				<div id="error" class="row">
+			<c:if test="${mensajeError != null}">	  	
+				<br></br>
+				<br></br>
+				<div class="col-md-4"></div>
+ 				<div class="col-md-4"><p><h4><c:out value="${mensajeError}"/></h4><p></div>
+ 				<div class="col-md-4"></div>
+			</c:if>
+		</div>
 	</div>
 </body>
 </html>

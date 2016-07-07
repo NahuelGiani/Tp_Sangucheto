@@ -1,12 +1,12 @@
 package tallerweb.sangucheto.modelo;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Sanguchetto {
 
 	private static Sanguchetto instance = new Sanguchetto();
-	@SuppressWarnings("unused")
 	private List<Ingrediente> ingredientes = new LinkedList<Ingrediente>();
 	
 	private Sanguchetto(){}
@@ -15,6 +15,8 @@ public class Sanguchetto {
 		return instance;
 	}
 	
+////////////////
+	
 	/**
 	 * Elimina todos los ingredientes del sanguchetto.<br>
 	 */
@@ -22,38 +24,66 @@ public class Sanguchetto {
 		// Implementar
 	}
 	
+////////////////
+	
 	/**
 	 * Agrega un ingrediente al carrito.<br>
 	 * @param ingrediente
 	 */
-	public void agregarIngrediente(Ingrediente ingrediente){
-		// Implementar
+	public void agregarIngrediente(Ingrediente ingrediente) throws Exception{
+		if(!this.ingredientes.equals(ingrediente)){
+		this.ingredientes.add(ingrediente);
+		}else{
+			throw new Exception("ERROR: El ingrediente ya existe en el sanguchetto");
+		}
 	}
+
+////////////////
 	
 	/**
 	 * Lista todos los ingredientes que forman parte del sanguchetto.<br>
 	 * @return
 	 */
 	public List<Ingrediente> verIngredientes(){
-		// Implementar
-		return null;
-	}
+        List<Ingrediente> listaIngredientes = new ArrayList<Ingrediente>();
+
+        for(Ingrediente ingredienteActual:ingredientes){
+        	if(ingredienteActual.getTipo()==TipoIngrediente.INGREDIENTE){
+        		listaIngredientes.add(ingredienteActual);
+        	}
+        }
+        return listaIngredientes;
+    }
+
+////////////////
 	
 	/**
      * Lista todos los condimentos que forman parte del sanguchetto.<br>
      * @return
      */
     public List<Ingrediente> verCondimentos(){
-        // Implementar
-        return null;
+        List<Ingrediente> listaCondimentos = new ArrayList<Ingrediente>();
+
+        for(Ingrediente ingredienteActual:ingredientes){
+        	if(ingredienteActual.getTipo()==TipoIngrediente.CONDIMENTO){
+        		listaCondimentos.add(ingredienteActual);
+        	}
+        }
+        return listaCondimentos;
     }
 	
+////////////////
+    
 	/**
 	 * Devuelve el precio total del sanguchetto.<br>
 	 * @return
 	 */
 	public Double getPrecio(){
-		// Implementar
-		return null;
+		Double precioTotal = 0.0;
+		
+        for(Ingrediente ingredienteActual:ingredientes){
+        	precioTotal += ingredienteActual.getPrecio();
+        }
+		return precioTotal;
 	}
 }

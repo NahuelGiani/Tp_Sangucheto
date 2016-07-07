@@ -2,8 +2,6 @@ package tallerweb.sangucheto.controladores;
 
 import java.util.Map;
 import java.util.Set;
-
-import org.junit.runners.Parameterized.Parameters;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
 import tallerweb.sangucheto.modelo.Ingrediente;
 import tallerweb.sangucheto.modelo.Stock;
 
@@ -138,7 +135,7 @@ public class ControladorStock {
 					modeloIngredientes.addAttribute("miStock", stockQueEnvio);
 					return new ModelAndView("stock_actual",modeloIngredientes);		
 				} else {
-					String mensajeError = "ERROR: No se puede restar mas de lo que hay";
+					String mensajeError = "ERROR: No se puede restar mas cantidad de la que hay";
 					Map<Ingrediente, Integer> stockQueEnvio = miStock.obtenerStock();
 					modeloIngredientes.addAttribute("miStock", stockQueEnvio);
 					modeloIngredientes.addAttribute("mensajeError", mensajeError);

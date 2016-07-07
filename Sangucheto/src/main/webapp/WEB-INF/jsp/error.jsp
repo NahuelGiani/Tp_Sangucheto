@@ -19,7 +19,7 @@
 	  			<h2>UPS!</h2>
 				<h3>La página que buscas no existe en nuestro servidor!</h2>
 				
-				<a type="button" class="btn btn-info" href="/sangucheto">Volver al inicio</a>
+				<a type="button" class="btn btn-info" href="/sanguchetto">Volver al inicio</a>
 			</div>
 	  		<div class="col-md-4"></div>
 	 		<div class="col-md-2"></div>
