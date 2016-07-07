@@ -17,6 +17,7 @@ import tallerweb.sangucheto.modelo.Ingrediente;
 import tallerweb.sangucheto.modelo.Stock;
 
 @Controller
+@RequestMapping("/stock")
 public class ControladorStock {
 	
 	@RequestMapping(value = "index", method = RequestMethod.GET)
@@ -45,7 +46,7 @@ public class ControladorStock {
 /////////Agregar ingrediente	
 	@RequestMapping("/agregar_ingrediente")
 	public ModelAndView agregarIngrediente(@ModelAttribute("ingrediente") Ingrediente miIngrediente){
-		if(miIngrediente != null){
+		if(miIngrediente.getNombre() != null){
 		ModelMap modeloIngredientes = new ModelMap();
 		Stock miStock = Stock.getInstance();
 		miStock.agregarIngrediente(miIngrediente);
@@ -163,7 +164,7 @@ public class ControladorStock {
 			if(actual.equals(miIngrediente)){
 				modeloIngredientes.put("miIngrediente", miIngrediente);
 				modeloIngredientes.put("miStock", miStock);
-				return new ModelAndView("confirmar_eliminacion_ingrediente",modeloIngredientes);
+				return new ModelAndView("confirmar_eliminar_ingrediente",modeloIngredientes);
 			}
 		}
 		return new ModelAndView("error");

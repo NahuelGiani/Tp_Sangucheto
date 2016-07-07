@@ -7,8 +7,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="../css/estilos.css" rel="stylesheet">
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="<c:url value="/resources/css/estilos.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 <title>Aumentar stock</title>
 </head>
 <body>
