@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+#contenedor{
+	text-align: center;
+}
+
+
+#imagenes_index, img{
+	width: 50px;
+	heigth: 50px;
+}
+
+#tabla_stock{
+	text-align: center;
+}
