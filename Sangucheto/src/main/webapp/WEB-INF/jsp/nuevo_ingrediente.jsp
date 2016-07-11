@@ -36,11 +36,10 @@
 		<br></br>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Tipo:</label>
-				<label class="radio-inline"> <input type="radio"
-					name="inlineRadioOptions" id="inlineRadio1" value="INGREDIENTE" required>
+				<label class="radio-inline"> <input type="radio" name="tipo" id="inlineRadio1" value="INGREDIENTE" required>
 					Ingrediente
 				</label> <label class="radio-inline"> <input type="radio"
-					name="inlineRadioOptions" id="inlineRadio2" value="CONDIMENTO" required>
+					name="tipo" id="inlineRadio2" value="CONDIMENTO" required>
 					Condimento
 				</label>
 			</div>

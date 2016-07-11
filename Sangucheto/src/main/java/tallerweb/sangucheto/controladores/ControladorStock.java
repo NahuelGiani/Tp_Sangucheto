@@ -45,6 +45,7 @@ public class ControladorStock {
 	public ModelAndView agregarIngrediente(@ModelAttribute("ingrediente") Ingrediente miIngrediente){
 		if(miIngrediente.getNombre() != null){
 		ModelMap modeloIngredientes = new ModelMap();
+		System.out.println(miIngrediente.getTipo());
 		Stock miStock = Stock.getInstance();
 		miStock.agregarIngrediente(miIngrediente);
 		Map<Ingrediente, Integer> listaDeIngredientes = Stock.getInstance().obtenerStock();

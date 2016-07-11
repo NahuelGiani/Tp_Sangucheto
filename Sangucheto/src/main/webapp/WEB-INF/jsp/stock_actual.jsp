@@ -21,18 +21,18 @@
 				<div class="table-responsive">
   					<table id="tabla_stock" class="table table-hover">
 						<tr>
-							<td><strong><h2>Nuestro stock actual</h2></strong></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="active"><strong><h2>Nuestro stock actual</h2></strong></td>
+							<td class="active"></td>
+							<td class="active"></td>
+							<td class="active"></td>
+							<td class="active"></td>
 						</tr>
 						<tr>
-							<td><strong>Ingrediente</strong></td>
-							<td><strong>Cantidad en stock</strong></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td class="active"><strong>Ingrediente</strong></td>
+							<td class="active"><strong>Cantidad en stock</strong></td>
+							<td class="active"></td>
+							<td class="active"></td>
+							<td class="active"></td>
 						</tr>
 						<c:forEach items="${miStock}" var="ingredienteActual">
 							<tr>
