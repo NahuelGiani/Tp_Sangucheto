@@ -9,6 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="<c:url value="/resources/css/estilos.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+<link rel="shortcut icon" href="<c:url value="/resources/img/favicon.ico" />" />
 <title>Stock actual</title>
 </head>
 

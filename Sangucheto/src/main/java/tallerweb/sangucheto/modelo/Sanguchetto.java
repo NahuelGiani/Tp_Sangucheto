@@ -21,7 +21,7 @@ public class Sanguchetto {
 	 * Elimina todos los ingredientes del sanguchetto.<br>
 	 */
 	public void vaciar(){
-		// Implementar
+		ingredientes.clear();
 	}
 	
 ////////////////

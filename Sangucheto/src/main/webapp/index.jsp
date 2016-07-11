@@ -10,7 +10,8 @@
 <link href="<c:url value="/resources/css/estilos.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/links_index.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
-<title>Stock actual</title>
+<link rel="shortcut icon" href="<c:url value="/resources/img/favicon.ico" />" />
+<title>Bienvenido a MiSanguchetto.com</title>
 </head>
 <body>
 
@@ -28,7 +29,7 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div id="link_sangucheto" class="col-md-5">
-				<a href="sanguchetto/mi_sanguchetto">
+				<a href="mi_sanguchetto">
 					<h3>Cree su sanguchetto ahora mismo!</h3>
 					<br></br>
 					<div id="imagen1"><img src="<c:url value="/resources/img/sanguchetto.jpg"/>"/></img></div>
