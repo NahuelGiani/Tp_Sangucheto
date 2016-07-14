@@ -53,6 +53,7 @@
 						<td class="info"><strong></strong></td>
 					</tr>
 				</table>
+					<a class="btn btn-primary" href="../sanguchetto/mi_sanguchetto" role="button">Volver</a>				
 			</div>
 		</div>
 	</div>
