@@ -25,7 +25,7 @@ import tallerweb.sangucheto.modelo.TipoIngrediente;
 
 @RequestMapping(value = "index", method = RequestMethod.GET)
 public ModelAndView index() {
-	return new ModelAndView("sanguchetto");
+	return new ModelAndView("mi_sanguchetto");
 }
 	
 ////////////////////////////////////////
@@ -45,6 +45,34 @@ public ModelAndView sanguchettoFinal(){
 	modeloIngredientes.setViewName("sanguchetto_final");
 	return modeloIngredientes;
 	}
+
+
+////////////////////////////////////////
+//////////////////CANCELAR SANGUCHETTO
+
+		@RequestMapping("/cancelar_sanguchetto")
+		public ModelAndView cancelarSanguchetto(){
+			ModelAndView modeloIngredientes = new ModelAndView();
+			Stock miStock = Stock.getInstance();
+			Sanguchetto miSanguchetto = Sanguchetto.getInstance();		
+			List<Ingrediente> misCondimentos  = miSanguchetto.verCondimentos();
+			List<Ingrediente> misIngredientes = miSanguchetto.verIngredientes();
+			//CONDIMENTOS
+			Iterator<Ingrediente> itCondimentos = misCondimentos.iterator();
+			while(itCondimentos.hasNext()){
+				Ingrediente actual = itCondimentos.next();
+				miStock.agregarStock(actual, 1);
+			}
+			//INGREDIENTES
+			Iterator<Ingrediente> itIngredientes = misIngredientes.iterator();
+			while(itIngredientes.hasNext()){
+				Ingrediente actual = itIngredientes.next();
+				miStock.agregarStock(actual, 1);
+			}
+			//VACIAR
+			miSanguchetto.vaciar();
+			return new ModelAndView("mi_sanguchetto");
+		}
 
 //////////////////////////////
 /////////////////ARMAR SANGUCHETTO

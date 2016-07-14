@@ -30,35 +30,30 @@
 					</tr>
 					<tr>
 						<td class="active"><strong>Ingrediente agregado</strong></td>
-						<td class="active"><strong>Precio</strong></td>
+						<td class="active"><strong>Precio por unidad</strong></td>
 						<td class="active"></td>
 					</tr>
 					<c:forEach items="${misIngredientesSanguchetto}" var="ingredienteActual">
 						<tr>
 							<td>${ingredienteActual.getNombre()}</td>
 							<td>${ingredienteActual.getPrecio()}$</td>
-							<td><a class="btn btn-danger"
-								href="confirmar_eliminar_ingrediente/${ingredienteActual.getNombre()}"
-								role="button">Eliminar ingrediente</a></td>
+							<td></td>
 						</tr>
 					</c:forEach>
 					<tr>
 						<td class="active"><strong>Condimento agregado</strong></td>
-						<td class="active"><strong>Precio</strong></td>
+						<td class="active"><strong>Precio por unidad</strong></td>
 						<td class="active"></td>
 					</tr>
 					<c:forEach items="${misCondimentosSanguchetto}" var="condimentoActual">
 						<tr>
 							<td>${condimentoActual.getNombre()}</td>
 							<td>${condimentoActual.getPrecio()}$</td>
-							<td><a class="btn btn-danger"
-								href="confirmar_eliminar_ingrediente/${ingredienteActual.getNombre()}"
-								role="button">Eliminar ingrediente</a></td>
 						</tr>
 					</c:forEach>
 					<tr>
 						<td class="info"><strong>TOTAL:</strong></td>
-						<td class="info"><strong></strong></td>
+						<td class="info"><strong>${Sanguchetto.getInstance().getPrecio()}</strong></td>
 						<td class="info"></td>
 					</tr>
 				</table>
@@ -95,10 +90,11 @@
 	<br></br>
 	<br></br>
 		<div class="row">
-			<div class="col-md-4"><a class="btn btn-info" href="index.jsp" role="button">Volver</a></div>
-			<div class="col-md-4"><button type="button" class="btn btn-danger">Cancelar sanguchetto</button></div>
-			<div class="col-md-4"><a class="btn btn-primary" type="button" href="sanguchetto_final" >Confirmar sanguchetto</button></div>
+			<div class="col-md-4"><a class="btn btn-info"    type="button" href="index.jsp">Volver</a></div>
+			<div class="col-md-4"><a class="btn btn-danger"  type="button" href="cancelar_sanguchetto">Cancelar sanguchetto</a></div>
+			<div class="col-md-4"><a class="btn btn-primary" type="button" href="sanguchetto_final">Confirmar sanguchetto</a></div>
 		</div>
+		<br></br>
 	</div>
 </body>
 </html>
