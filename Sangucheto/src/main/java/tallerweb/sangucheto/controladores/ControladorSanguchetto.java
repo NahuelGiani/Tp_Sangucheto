@@ -86,6 +86,8 @@ public ModelAndView sanguchettoFinal(){
 		List<Ingrediente> misCondimentosSanguchetto = Sanguchetto.getInstance().verCondimentos();
 		Set<Ingrediente> listaIngredientes = Stock.getInstance().listarIngredientesDisponibles();
 		Double precioAPagar = Sanguchetto.getInstance().getPrecio();
+		modeloStock.addObject("precioAPagar",precioAPagar);
+
 		ArrayList<Ingrediente> misCondimentosStock = new ArrayList<Ingrediente>();
 		ArrayList<Ingrediente> misIngredientesStock = new ArrayList<Ingrediente>();
 		Iterator<Ingrediente> it = listaIngredientes.iterator();
@@ -174,7 +176,6 @@ public ModelAndView sanguchettoFinal(){
 		ModelAndView modeloIngredientes = new ModelAndView();
 		Stock miStock = Stock.getInstance();
 		Sanguchetto miSanguchetto = Sanguchetto.getInstance();
-		Double precioAPagar = Sanguchetto.getInstance().getPrecio();
 		Set<Ingrediente> miListaIngredientes = miStock.listarIngredientesDisponibles();
 		ArrayList<Ingrediente> misCondimentosStock = new ArrayList<Ingrediente>();
 		ArrayList<Ingrediente> misIngredientesStock = new ArrayList<Ingrediente>();
@@ -199,6 +200,7 @@ public ModelAndView sanguchettoFinal(){
 				miSanguchetto.agregarIngrediente(miIngrediente);
 				List<Ingrediente> misIngredientesSanguchetto = Sanguchetto.getInstance().verIngredientes();
 				List<Ingrediente> misCondimentosSanguchetto = Sanguchetto.getInstance().verCondimentos();
+				Double precioAPagar = Sanguchetto.getInstance().getPrecio();
 				modeloIngredientes.addObject("misIngredientesSanguchetto", misIngredientesSanguchetto);
 				modeloIngredientes.addObject("misCondimentosSanguchetto", misCondimentosSanguchetto);
 				modeloIngredientes.addObject("misIngredientesStock", misIngredientesStock);
@@ -219,7 +221,6 @@ public ModelAndView sanguchettoFinal(){
 		ModelAndView modeloIngredientes = new ModelAndView();
 		Stock miStock = Stock.getInstance();
 		Sanguchetto miSanguchetto = Sanguchetto.getInstance();
-		Double precioAPagar = Sanguchetto.getInstance().getPrecio();
 		Set<Ingrediente> miListaIngredientes = miStock.listarIngredientesDisponibles();
 		ArrayList<Ingrediente> misCondimentosStock = new ArrayList<Ingrediente>();
 		ArrayList<Ingrediente> misIngredientesStock = new ArrayList<Ingrediente>();
@@ -244,6 +245,7 @@ public ModelAndView sanguchettoFinal(){
 				miSanguchetto.agregarIngrediente(miIngrediente);
 				List<Ingrediente> misIngredientesSanguchetto = Sanguchetto.getInstance().verIngredientes();
 				List<Ingrediente> misCondimentosSanguchetto = Sanguchetto.getInstance().verCondimentos();
+				Double precioAPagar = Sanguchetto.getInstance().getPrecio();
 				modeloIngredientes.addObject("misIngredientesSanguchetto", misIngredientesSanguchetto);
 				modeloIngredientes.addObject("misCondimentosSanguchetto", misCondimentosSanguchetto);
 				modeloIngredientes.addObject("misIngredientesStock", misIngredientesStock);
