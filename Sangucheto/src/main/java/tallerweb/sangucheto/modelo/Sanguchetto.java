@@ -30,12 +30,8 @@ public class Sanguchetto {
 	 * Agrega un ingrediente al carrito.<br>
 	 * @param ingrediente
 	 */
-	public void agregarIngrediente(Ingrediente ingrediente) throws Exception{
-		if(!this.ingredientes.equals(ingrediente)){
+	public void agregarIngrediente(Ingrediente ingrediente){
 		this.ingredientes.add(ingrediente);
-		}else{
-			throw new Exception("ERROR: El ingrediente ya existe en el sanguchetto");
-		}
 	}
 
 ////////////////

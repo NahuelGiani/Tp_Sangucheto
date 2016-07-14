@@ -35,10 +35,10 @@
 					</tr>
 					<c:forEach items="${misIngredientesSanguchetto}" var="ingredienteActual">
 						<tr>
-							<td>${ingredienteActual.key.getNombre()}</td>
-							<td>${ingredienteActual.key.getPrecio()}$</td>
+							<td>${ingredienteActual.getNombre()}</td>
+							<td>${ingredienteActual.getPrecio()}$</td>
 							<td><a class="btn btn-danger"
-								href="confirmar_eliminar_ingrediente/${ingredienteActual.key.getNombre()}"
+								href="confirmar_eliminar_ingrediente/${ingredienteActual.getNombre()}"
 								role="button">Eliminar ingrediente</a></td>
 						</tr>
 					</c:forEach>
@@ -49,10 +49,10 @@
 					</tr>
 					<c:forEach items="${misCondimentosSanguchetto}" var="condimentoActual">
 						<tr>
-							<td>${ingredienteActual.key.getNombre()}</td>
-							<td>${ingredienteActual.key.getPrecio()}$</td>
+							<td>${condimentoActual.getNombre()}</td>
+							<td>${condimentoActual.getPrecio()}$</td>
 							<td><a class="btn btn-danger"
-								href="confirmar_eliminar_ingrediente/${ingredienteActual.key.getNombre()}"
+								href="confirmar_eliminar_ingrediente/${ingredienteActual.getNombre()}"
 								role="button">Eliminar ingrediente</a></td>
 						</tr>
 					</c:forEach>
@@ -85,8 +85,7 @@
 			<form class="form-inline" action="agregar_condimento_sanguchetto" method="POST">
 				<select class="form-control" name="condimento_elegido">
 					<c:forEach items="${misCondimentosStock}" var="miCondimento">
-						<option value="${miCondiment.key.getNombre()}">
-							${miCondimento.getNombre()}</option>
+						<option value="${miCondimento.getNombre()}">${miCondimento.getNombre()}</option>
 					</c:forEach>
 				</select>
 			</div>
@@ -98,7 +97,7 @@
 		<div class="row">
 			<div class="col-md-4"><a class="btn btn-info" href="index.jsp" role="button">Volver</a></div>
 			<div class="col-md-4"><button type="button" class="btn btn-danger">Cancelar sanguchetto</button></div>
-			<div class="col-md-4"><button type="button" class="btn btn-primary">Confirmar sanguchetto</button></div>
+			<div class="col-md-4"><a class="btn btn-primary" type="button" href="sanguchetto_final" >Confirmar sanguchetto</button></div>
 		</div>
 	</div>
 </body>

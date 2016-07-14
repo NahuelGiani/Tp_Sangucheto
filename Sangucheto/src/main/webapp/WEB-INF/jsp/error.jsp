@@ -17,9 +17,18 @@
 			<div class="col-md-2"></div>
 	  		<div class="col-md-4">
 	  			<br></br>
-	  			<h2>UPS!</h2>
-				<h3>La página que buscas no existe en nuestro servidor!</h2>
-				
+	  			<c:choose>
+					<c:when test="${mensajeError != null}">
+    					<br></br>
+						<br></br>
+						<h2>UPS!</h2>
+		 				<p><h3><c:out value="${mensajeError}"/></h3><p>
+  					</c:when>
+  					<c:otherwise>
+				    	<h2>UPS!</h2>
+						<h3>La página que buscas no existe en nuestro servidor!</h2>
+					</c:otherwise>
+				</c:choose>  				
 				<a type="button" class="btn btn-info" href="/sanguchetto">Volver al inicio</a>
 			</div>
 	  		<div class="col-md-4"></div>
