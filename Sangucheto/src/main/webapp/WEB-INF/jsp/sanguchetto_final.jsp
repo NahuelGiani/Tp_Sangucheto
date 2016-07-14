@@ -50,7 +50,7 @@
 					</c:forEach>
 					<tr>
 						<td class="info"><strong>TOTAL:</strong></td>
-						<td class="info"><strong></strong></td>
+						<td class="info"><strong>${precioAPagar}$</strong></td>
 					</tr>
 				</table>
 			</div>

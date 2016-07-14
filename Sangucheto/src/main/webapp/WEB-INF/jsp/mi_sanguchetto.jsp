@@ -53,7 +53,7 @@
 					</c:forEach>
 					<tr>
 						<td class="info"><strong>TOTAL:</strong></td>
-						<td class="info"><strong>${Sanguchetto.getInstance().getPrecio()}</strong></td>
+						<td class="info"><strong>${precioAPagar}$</strong></td>
 						<td class="info"></td>
 					</tr>
 				</table>
